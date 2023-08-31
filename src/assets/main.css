@@ -1,0 +1,25 @@
+@import './fonts.css';
+@import './base.css';
+
+body {
+  min-height: 100vh;
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
+}
+
+#app {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-items: center;
+    align-items: flex-start;
+  }
+
+  .body {
+    padding: 58px 40px;
+  }
+}
