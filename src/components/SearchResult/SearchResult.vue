@@ -37,7 +37,8 @@
     />
     <div class="source-container">
       <span class="source-label"> Source </span>
-      <a
+      <div class="source-grid">
+        <a
         class="source-link-wrapper"
         v-for="source in word.sources"
         :href="source"
@@ -47,6 +48,7 @@
         <span class="source-link" :class="{ dark: isDarkMode }">{{ source }}</span>
         <img src="@/components/icons/icon-new-window.svg" alt="New Window" />
       </a>
+      </div>
     </div>
   </div>
 </template>
@@ -139,7 +141,7 @@ export default defineComponent({
 
 .source-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -172,5 +174,10 @@ export default defineComponent({
 
 .dark {
   color: #fff;
+}
+
+.source-grid {
+  display: grid;
+  gap: 8px;
 }
 </style>
