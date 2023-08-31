@@ -1,6 +1,6 @@
 # Frontend Mentor - Dictionary web app solution
 
-This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -14,7 +14,6 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -46,16 +45,12 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Vue](https://vuejs.org/) - Progressive JS Framework
+- [Pinia](https://pinia.vuejs.org/) - Store for Vue.js
 
 ### What I learned
 
@@ -63,41 +58,34 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I had previously worked with **VueJS** but with version 2, not 3. As I am a Frontend developer who mostly works with React, this was an interesting learning experience once more with a different JS framework that I don't use often.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+While developing this project, this was my first time using state management library in VueJS - **Pinia**. Suprisingly, it was easier to pick up than I had initially anticipated.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Additionally, I had not previously incorporated usage of `prefers-color-scheme` in any of my prior projects.
+
+What was quite pleasant while working on this project was not using libraries like `styled-components` to add dynamic styling for components as it can be done in Vue without it.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In future projects, I would like to make some more projects using Vue and also Angular to become more familiar with distinguishments between all 3 major frameworks. Possibly could also make one using Svelte.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Pinia](https://pinia.vuejs.org/) - Documentation for state management library in Vue.js. It is pretty straight forward as well easy to comprehend to get started.
+- [Stackoverflow - Dark mode in JS](https://stackoverflow.com/questions/56393880/how-do-i-detect-dark-mode-using-javascript) - This page has a good answer from a user in how to detect if the browser has dark mode enabled or not. Additionally, there is a way how to detect not only initial state, but also subscribe to changes if you want to run code in such situations.
+- [Deploy Vue App to GitHub pages](https://learnvue.co/articles/deploy-vue-to-github-pages) - Nice and straight-to-point article about how to publish your Vue project in Github Pages. **Note** - in this article it is mentioned to use `publicDir` for setting public path for the project based on environment. If you are building Vue project using Vite, then you should use `base` key, instead of `publicDir`
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+```typescript
+export default defineConfig({
+  ...some other settings,
+  base: process.env.NODE_ENV === "production" ? "/REPO_NAME/" : "/",
+})
+```
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [G.F.Jankavs](https://www.gfjankavs.lv/)
+- Frontend Mentor - [@GFJankavs](https://www.frontendmentor.io/profile/GFJankavs)
+- LinkedIn - [Gustavs Fricis Jankavs](https://www.linkedin.com/in/gustavs-fricis-jankavs/)
+- DEV - [@gfjankavs](https://dev.to/gfjankavs)
