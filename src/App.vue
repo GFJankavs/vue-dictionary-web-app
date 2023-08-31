@@ -22,6 +22,7 @@ import SearchError from './components/SearchError.vue'
 import { useWordStore } from './stores/word'
 import { mapActions, mapWritableState } from 'pinia'
 import { useDictionaryStore } from './stores/dictionary'
+import { setDarkModeVariable } from '@/helpers';
 
 export default defineComponent({
   computed: {
@@ -36,18 +37,24 @@ export default defineComponent({
     SearchError
   },
   methods: {
-    ...mapActions(useDictionaryStore, ['updateDarkMode'])
+    ...mapActions(useDictionaryStore, ['updateDarkMode']),
+    setDarkModeVariable
   },
   beforeMount() {
     console.log('I got triggered');
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       this.updateDarkMode(true);
+      this.setDarkModeVariable(true);
     }
   },
 })
 </script>
 
 <style>
+body {
+  background-color: var(--bg);
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -62,10 +69,6 @@ export default defineComponent({
 }
 
 .body {
-  background-color: #fff;
-}
-
-.darkMode {
-  background-color: #050505;
+  background-color: var(--bg);
 }
 </style>

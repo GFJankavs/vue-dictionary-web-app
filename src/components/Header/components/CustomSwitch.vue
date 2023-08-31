@@ -6,9 +6,11 @@
 </template>
 
 <script lang="ts">
+import { setDarkModeVariable } from '@/helpers'
 import { useDictionaryStore } from '@/stores/dictionary'
 import { mapActions, mapWritableState } from 'pinia'
 import { defineComponent } from 'vue'
+setDarkModeVariable
 
 export default defineComponent({
   computed: {
@@ -16,8 +18,10 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useDictionaryStore, ['updateDarkMode']),
+    setDarkModeVariable,
     onSwitchClick(value: boolean) {
       this.updateDarkMode(value)
+      this.setDarkModeVariable(value)
     }
   }
 })
